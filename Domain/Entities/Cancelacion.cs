@@ -13,7 +13,6 @@ namespace Domain.Entities
         public int numeroContacto { get; set; }
         public string tipoContacto { get; set; }
         public string correoCliente { get; set; }
-        public string fechaSeleccion { get; set; }
         public string tipologia { get; set; }
         public string fechaSeleccionCategoria { get; set; }
         public int lineaProductoSolicitud { get; set; }
@@ -23,4 +22,4 @@ namespace Domain.Entities
         public string fechaNotificacionInmediata { get; set; }
     }
 }
-}
+

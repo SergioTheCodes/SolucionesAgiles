@@ -1,10 +1,12 @@
+using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Infrastructure.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<Adesasolucionesagilesbd01Context>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("adesasolucionesagilesbd01")));
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICancelacionRepository, CancelacionRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

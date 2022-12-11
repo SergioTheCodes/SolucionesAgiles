@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  sa_cancelacionapi:
+    image: ${DOCKER_REGISTRY-}sacancelacionapi
+    build:
+      context: .
+      dockerfile: SA_CancelacionAPI/Dockerfile
